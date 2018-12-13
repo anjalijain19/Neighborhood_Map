@@ -8,7 +8,84 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.restaurant-li{
+  padding: 0 10px;
+  font-size: 1.2rem;
+  border: 1px solid #bbbbbb;
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  cursor: pointer;
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  color: #fff;
+  background: #000;
+  position: fixed;
+}
+
+.filters {
+  margin-bottom: 10px;
+}
+.filters input{
+  height: 30px;
+  padding: 6px 10px 6px 40px;
+  width: calc(100% - 52px);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-image: url('searchicon.png');
+}
+
+.main {
+  flex: 1;
+  background-color: #282c34
+}
+
+.marker-list {
+  margin: 10px auto;
+  width: 90%;
+}
+.marker-list ul{
+  margin: 0;padding: 0;
+}
+.marker-list ul li{
+  list-style:none ;
+}
+
+#map {
+  width:100%; height : calc(100vh - 70px);;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar, .main{
+    height: calc(100vh - 70px);
+  }
+
+  .sidebar{
+    width: 25%;
+  }
+
+  .main {
+    margin-left: 25%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar, .main{
+    height: calc(100vh - 70px);
+  }
+
+  .sidebar{
+    width: 100%;
+  }
+
+  .main {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+}
+
