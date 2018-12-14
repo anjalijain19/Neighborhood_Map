@@ -1,13 +1,12 @@
 .app-logo {
   padding: 9px 10px;
-  width: calc(25% - 20px);
+  display: inline-block;;
 }
 
 .app-header {
   position: relative;
-  -ms-flex-direction: row;
   flex-direction: row;
-  height: 70px;
+  height: 69px;
   padding: 0;
   margin: 0;
   background-color: #000;
@@ -26,8 +25,7 @@
   float: left;
 }
 .app-title{
-  float: left;
-  margin-left:10px;
+  padding-left:65px;
 }
 
 .app-title span{
@@ -35,4 +33,5 @@
   font-size: 1.5rem;
   color: #fff;
 }
+
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class List extends Component {
+class LocationLiView extends Component {
     render() {
         return (
             <ul>
@@ -10,4 +10,4 @@ class List extends Component {
     }
 }
 
-export default List;
+export default LocationLiView;

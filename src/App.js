@@ -83,6 +83,18 @@ class App extends Component {
         this.onMarkerClick(marker);
     }
 
+gm_authFailure() {
+    window.alert("Google Maps error!!!");
+}
+
+togglesidebar = () => {
+    let element = document.getElementById("main");
+    console.log(111);
+   if(element)
+       element.classList.toggle("ml-main");
+}
+
+
     render() {
           return (
                 <div className="App">
@@ -90,6 +102,11 @@ class App extends Component {
                         <div className="app-logo">
                             <div className="logo"><img src={logo} width="50" height="50" alt="neighbourhood map logo"/></div>
                             <div className="app-title"><span>Neighborhood Map</span></div>
+                        </div>
+                        <div className="menu-container" onClick={this.togglesidebar}>
+                            <div className="bar1"></div>
+                            <div className="bar2"></div>
+                            <div className="bar3"></div>
                         </div>
                     </header>
                     <div className="app-body">
@@ -99,7 +116,7 @@ class App extends Component {
                                 onListClick={(location)=>this.onListClick}
                             />
                         </div>
-                        <main className="main">
+                        <main id="main" className="main ml-main">
                             <div id="map">
                                 <MapView {...this.state}
                                     onMarkerClick={(marker)=>this.onMarkerClick}

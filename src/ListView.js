@@ -13,7 +13,6 @@ class ListView extends Component {
         return this.props.locations;
     }
 
-
     handleQueryChange = event => {
         this.setState({ query: event.target.value});
             const markers = this.props.locations.map(location => {
@@ -39,7 +38,6 @@ class ListView extends Component {
                     <LocationLiView
                         {...this.props}
                         locations={this.onFilter()}
-                        onListClick={(location)=>this.props.onListClick}
                     />
                 </div>
             </div>
